@@ -18,6 +18,7 @@ public class QuizService
          // QuestionServices questionServices=new QuestionServices();
           questions = this.questionServices.getAllQuestion();
      }
+     //PlayQuiz Function Starts here...
    public void playQuiz()
    {
       Scanner scanner = new Scanner(System.in);
@@ -38,7 +39,7 @@ public class QuizService
     }
  scanner.close();
 }
-
+//getResult Function Starts here...
 public QuizResult getResult ()
 {
     int correctAnswers = 0;
@@ -51,8 +52,16 @@ public QuizResult getResult ()
     }
 
 int incorrectAnswer = questions.length - correctAnswers;
-
 double percentage=((double)correctAnswers / questions.length) * 100;
+String suggestion=getSuggestion(percentage);
+QuizResult QuizResult=new QuizResult(correctAnswers, incorrectAnswer, percentage, suggestion);
+
+return QuizResult;
+} 
+
+//getSuggestion() starts here...
+private String getSuggestion(double percentage)
+{
 String suggestion=" ";
 
 if(percentage >=0 && percentage<=30)
@@ -71,10 +80,7 @@ else
 {
   suggestion=" You are very good at concept and being into top list";
 }
-
-QuizResult QuizResult=new QuizResult(correctAnswers, incorrectAnswer, percentage, suggestion);
-
-return QuizResult;
-} 
+return suggestion;
+}
 
 }
