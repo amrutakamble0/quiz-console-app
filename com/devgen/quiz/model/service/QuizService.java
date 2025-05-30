@@ -30,13 +30,12 @@ public class QuizService
       System.out.println("Question: " +questions[i].getId());
       System.out.println(questions[i].getQuestion());
 
-      System.out.println(questions[i].getOption1());
-      System.out.println(questions[i].getOption2());
-      System.out.println(questions[i].getOption3());
-      System.out.println(questions[i].getOption4());
-
+      for(String option:questions[i].getOptions())
+      {
+         System.out.println(option);
+      }
        userSelectedAnswer[i]= scanner.next();
-    }
+    } 
  scanner.close();
 }
 //getResult Function Starts here...
