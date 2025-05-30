@@ -29,6 +29,10 @@ public class Question
           this.question = question;
      }
      
+     public void setAnswer(int answer) {
+          this.answer = answer;
+     }
+
      public int getAnswer() {
           return answer;
      }

@@ -12,7 +12,7 @@ public class QuizResult {
         this.percentage = percentage;
         this.suggestion = suggestion;
     }
-
+   
     public int getCorrectAnswers() {
         return correctAnswers;
     }
