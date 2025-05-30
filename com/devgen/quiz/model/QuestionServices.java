@@ -49,9 +49,14 @@ public void deletedQuestion(int id)
 {
     for(int i=0;i<questions.length;i++)
      {
-        if(id==questions[i].getId()){
-            questions[i]=null;
+        if(questions[i]!=null)
+        {
+             if(id==questions[i].getId())
+             {
+             questions[i]=null;
+             }
         }
+        
      }
     System.out.println( "Question Deleted Sucessfully...!");
 }

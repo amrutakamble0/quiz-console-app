@@ -35,8 +35,12 @@ public class QuestionServiceClient {
         for(Question q :questions)
         System.out.println(q);
         System.out.println("-----------------------------------------------------------------------------------");
-        
+
         questionServices.deletedQuestion(4);
+        questionServices.deletedQuestion(8);
+        questionServices.deletedQuestion(1);
+        questionServices.deletedQuestion(2);
+
         questions=questionServices.getAllQuestion();
         for(Question q :questions)
         System.out.println(q);
