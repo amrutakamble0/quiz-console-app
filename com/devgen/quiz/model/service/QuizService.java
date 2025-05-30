@@ -8,7 +8,7 @@ import com.devgen.quiz.model.model.QuizResult;
 
 public class QuizService
  {
-    private String[] userSelectedAnswer =new String[5];
+    private int[] userSelectedAnswer =new int[5];
     private Question[] questions;
     private QuestionServices questionServices;
 
@@ -34,7 +34,7 @@ public class QuizService
       {
          System.out.println(option);
       }
-       userSelectedAnswer[i]= scanner.next();
+       userSelectedAnswer[i]= scanner.nextInt();
     } 
  scanner.close();
 }
@@ -44,7 +44,7 @@ public QuizResult getResult ()
     int correctAnswers = 0;
     for(int i=0;i<userSelectedAnswer.length;i++)
     {
-         if(questions[i].getAnswer().equals(userSelectedAnswer[i]))
+         if(questions[i].getAnswer()==userSelectedAnswer[i])
          {
             correctAnswers++;
          }

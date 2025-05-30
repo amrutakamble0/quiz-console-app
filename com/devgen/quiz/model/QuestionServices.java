@@ -11,15 +11,15 @@ private int current;
 public QuestionServices(int Size)
 {
 questions =new Question[Size];
-questions[current]=new Question(1,"Q1. Array index starts from?", new String[] {"0", "1", "2", "3"}, "0");
+questions[current]=new Question(1,"Q1. Array index starts from?", new String[] {"0", "1", "2", "3"},1);
 current++;
-questions[current]=new Question(2,"Q2. Size of int in java?", new String[] {"1", "2", "4"}, "4");
+questions[current]=new Question(2,"Q2. Size of int in java?", new String[] {"1", "2", "4"}, 3);
 current++;
-questions[current]=new Question(3,"Q3. Size of short in java?",new String[] {"0", "1", "2", "3"}, "2");
+questions[current]=new Question(3,"Q3. Size of short in java?",new String[] {"0", "1", "2", "3"}, 3);
 current++;
-questions[current]=new Question(4,"Q4. Size of double in java?",new String[] {"0", "4", "2", "8"}, "8");
+questions[current]=new Question(4,"Q4. Size of double in java?",new String[] {"0", "4", "2", "8"}, 4);
 current++;
-questions[current]=new Question(5,"Q5. Size of char in java?",new String[] {"2", "4"}, "2");
+questions[current]=new Question(5,"Q5. Size of char in java?",new String[] {"2", "4"}, 1);
 current++;
 }
 

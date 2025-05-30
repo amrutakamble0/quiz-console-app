@@ -7,10 +7,10 @@ public class Question
      private int id;
      private String question;
      private String[] options;
-     private String answer;
+     private int answer;//int makes a gives the answer option no thats why made it integer.
     // private String category;
      
-     public Question(int id, String question, String[] options, String answer) {
+     public Question(int id, String question, String[] options, int answer) {
           this.id = id;
           this.question = question;
           this.options = options;
@@ -29,7 +29,7 @@ public class Question
           this.question = question;
      }
      
-     public String getAnswer() {
+     public int getAnswer() {
           return answer;
      }
 
