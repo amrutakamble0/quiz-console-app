@@ -38,6 +38,7 @@ public void updatedQuestion(Question modifiedQuestion)
      {
         if(id==questions[i].getId()){
             questions[i]=modifiedQuestion;
+            break;
         }
      }
 
@@ -46,6 +47,12 @@ public void updatedQuestion(Question modifiedQuestion)
 
 public void deletedQuestion(int id)
 {
+    for(int i=0;i<questions.length;i++)
+     {
+        if(id==questions[i].getId()){
+            questions[i]=null;
+        }
+     }
     System.out.println( "Question Deleted Sucessfully...!");
 }
 

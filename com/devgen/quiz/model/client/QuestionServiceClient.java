@@ -28,12 +28,18 @@ public class QuestionServiceClient {
         Question originalQuestion=questions[1];
         originalQuestion.setAnswer(2);//Upadted new answer.
         originalQuestion.setQuestion("What is the size of short in java?");//Updated new question.
+
         questionServices.updatedQuestion(originalQuestion);
 
         questions=questionServices.getAllQuestion();
         for(Question q :questions)
         System.out.println(q);
-
+        System.out.println("-----------------------------------------------------------------------------------");
+        
+        questionServices.deletedQuestion(4);
+        questions=questionServices.getAllQuestion();
+        for(Question q :questions)
+        System.out.println(q);
     }
     
 }
